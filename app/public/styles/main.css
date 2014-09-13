@@ -29,8 +29,19 @@
   background-repeat: no-repeat;
   min-height: 280px;
 }
+@media(max-width:767px){
+  .carousel {
+    min-height: 100px;
+    background-size: 767px auto;
+  }
+}
 .carousel .container {
   padding-top: 100px;
+}
+@media(max-width:767px){
+  .carousel .container {
+    padding-top: 13px;
+  }
 }
 .page-main-text, .page-secondary-text {
   text-align: center;
@@ -60,12 +71,8 @@
 .form-container .form-info {
   color:grey;
 }
-
-#footer-region{
-  min-height: 160px;
-}
 .copy-right-container {
-  padding-top: 140px;
+  padding-top: 100px;
 }
 .copy-right {
   color: grey;
