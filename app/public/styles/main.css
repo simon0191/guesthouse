@@ -46,7 +46,8 @@
 }
 .form-container .form-group input{
   width: 330px;
-    padding: 5px 10px;
+  max-width: 80%;
+  padding: 5px 10px;
 }
 .form-container .form-submit-container{
   padding: 15px 0px;
