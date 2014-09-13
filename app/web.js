@@ -22,7 +22,7 @@ app.get(/^(.*)$/, function(req, res) {
 });
 
 
-var server = app.listen(3000, function() {
+var server = app.listen(8000, function() {
   console.log('Listening on port %d', server.address().port);
 });
 
@@ -33,9 +33,9 @@ function serveIndex(app, paths) {
     });
   });
 }
-function serveStaticDir(app, route, localRoute) {
+function serveStaticDir(app, route, localPath) {
   app.get(new RegExp('^/'+route+'/(.*)$'), function(req, res) {
-    var filePath = path.join(localRoute,req.params[0]);
+    var filePath = path.join(localPath,req.params[0]);
     console.log('Requesting '+filePath);
     fs.stat(filePath, function(err, stat) {
       if (err || !stat.isFile()) {
