@@ -1,1 +1,72 @@
-/*main.css*/
+.logo {
+  padding: 5px 0px;
+}
+.navbar-link {
+  color: black;
+}
+.special-navbar-link{
+  color: white;
+  background-color: #ebd102;
+  margin: 9px 0px;
+  border-radius: 0;
+  font-weight: bold;
+}
+.special-navbar-link:hover{
+  color: white;
+  background-color: #ebd102;
+}
+.special-navbar-link:active{
+  color: white;
+  background-color: #ebd102;
+}
+.special-navbar-link:focus{
+  color: white;
+  background-color: #ebd102;
+}
+
+.carousel {
+  background-image: url('/images/carousel.png');
+  background-repeat: no-repeat;
+  min-height: 280px;
+}
+.carousel .container {
+  padding-top: 100px;
+}
+.page-main-text {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.form-container {
+  background-color: #f3f3f3;
+  padding: 20px 0px;
+}
+.form-container .form-group{
+  margin-bottom: 5px;
+}
+.form-container .form-group input{
+  width: 330px;
+    padding: 5px 10px;
+}
+.form-container .form-submit-container{
+  padding: 15px 0px;
+}
+.form-container .form-submit-container .form-submit{
+  border-radius: 0;
+  background-color: #008ec1;
+  font-weight: bold;
+}
+.form-container .form-info {
+  color:grey;
+}
+
+#footer-region{
+  min-height: 160px;
+}
+.copy-right-container {
+  padding-top: 140px;
+}
+.copy-right {
+  color: grey;
+}
+

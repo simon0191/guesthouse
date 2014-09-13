@@ -9,9 +9,11 @@ var publicDir = path.join(__dirname,'/public/');
 var vendorDir = path.join(__dirname,'../bower_components/');
 var scriptsDir = path.join(publicDir,'/scripts/');
 var stylesDir = path.join(publicDir,'/styles/');
+var imagesDir = path.join(publicDir,'/images/');
 
 serveIndex(app,['/','/register','/login']);
 serveStaticDir(app,'scripts',scriptsDir);
+serveStaticDir(app,'images',imagesDir);
 serveStaticDir(app,'styles',stylesDir);
 serveStaticDir(app,'vendor',vendorDir);
 

@@ -12,10 +12,67 @@
   </head>
     <body>
       <div id="header-region">
-        <h1>header</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="logo">
+                <img src="/images/guesthouse-logo.png" height="41" width="183" alt="Guesthouse Logo">
+              </div>
+
+            </div>
+            <div class="col-xs-6 text-right">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="/login" class="navbar-link">LOGIN</a>
+                </li>
+                <li>
+                  <a href="/signup" class="navbar-link">SIGNUP</a>
+                </li>
+                <li>
+                  <button class="btn btn-default special-navbar-link">List your space</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><!-- end header region -->
+      <div id="main-region">
+        <div class="carousel">
+          <div class="container">
+            <h1 class="page-main-text">Create your account</h1>
+          </div>
+        </div><!-- end carousel -->
+        <div class="form-container">
+          <div class="container">
+            <div class="row">
+            <div class="col-xs-6 col-xs-offset-3 text-center">
+              <form>
+                <div class="form-group">
+                  <input type="text" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Your email address">
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Your password">
+                </div>
+                <div class="form-submit-container">
+                  <button class="btn btn-info form-submit">Sign up</button>
+                </div>
+              </form>
+              <span class="form-info">Got an account already?</span> <a href="/login">Log in</a>
+            </div>
+            </div>
+          </div>
+        </div><!-- end form -->
       </div>
-      <div id="main-region"></div>
-      <div id="footer-region"></div>
+      <div id="footer-region">
+        <div class="container">
+          <div class="copy-right-container">
+            <p class="copy-right text-center">&copy; Guesthouse, Inc.</p>
+          </div>
+        </div>
+      </div>
 
       <script src="/vendor/director/build/director.js"></script>
       <script src="/vendor/jquery/dist/jquery.js"></script>
