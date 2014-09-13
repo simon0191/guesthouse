@@ -74,6 +74,11 @@
 .copy-right-container {
   padding-top: 100px;
 }
+@media(max-width:767px){
+  .copy-right-container {
+    padding-top: 50px;
+  }
+}
 .copy-right {
   color: grey;
 }
