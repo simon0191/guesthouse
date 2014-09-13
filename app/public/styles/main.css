@@ -32,7 +32,7 @@
 .carousel .container {
   padding-top: 100px;
 }
-.page-main-text {
+.page-main-text, .page-secondary-text {
   text-align: center;
   color: white;
   font-weight: bold;
