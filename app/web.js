@@ -1,34 +1,51 @@
 var express = require('express');
+var _ = require('underscore');
 var path = require('path');
 var fs = require('fs');
 
 var app = express();
 
-var htmlDir = path.join(__dirname,'/public/');
+var publicDir = path.join(__dirname,'/public/');
 var vendorDir = path.join(__dirname,'../bower_components/');
+var scriptsDir = path.join(publicDir,'/scripts/');
+var stylesDir = path.join(publicDir,'/styles/');
 
-app.get('/login', function(req, res) {
-    res.sendfile(path.join(htmlDir,'index.html'));
-});
-app.get('/register', function(req, res) {
-    res.sendfile(path.join(htmlDir,'index.html'));
-});
-app.get(/^\/vendor\/(.*)$/, function(req, res) {
-    var filePath = path.join(vendorDir,req.params[0]);
-    console.log('Requesting '+filePath);
-    fs.stat(filePath, function(err, stat) {
-      if (err || !stat.isFile()) {
-        filePath = path.join(htmlDir,'404.html')
-      }
-      console.log('Serving', filePath);
-      res.sendfile(filePath);
-    });
-});
+serveIndex(app,['/','/register','/login']);
+serveStaticDir(app,'scripts',scriptsDir);
+serveStaticDir(app,'styles',stylesDir);
+serveStaticDir(app,'vendor',vendorDir);
+
 app.get(/^(.*)$/, function(req, res) {
-    res.sendfile(path.join(htmlDir,'404.html'));
+  send404(res);
 });
 
 
 var server = app.listen(3000, function() {
   console.log('Listening on port %d', server.address().port);
 });
+
+function serveIndex(app, paths) {
+  _(paths).each(function(p) {
+    app.get(p, function(req, res) {
+      res.sendFile(path.join(publicDir,'index.html'));
+    });
+  });
+}
+function serveStaticDir(app, route, localRoute) {
+  app.get(new RegExp('^/'+route+'/(.*)$'), function(req, res) {
+    var filePath = path.join(localRoute,req.params[0]);
+    console.log('Requesting '+filePath);
+    fs.stat(filePath, function(err, stat) {
+      if (err || !stat.isFile()) {
+        send404(res);
+      } else {
+        res.sendFile(filePath);
+      }
+
+    });
+  });
+}
+function send404(res) {
+  res.status(404);
+  res.sendFile(path.join(publicDir,'404.html'));
+}

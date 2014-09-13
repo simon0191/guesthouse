@@ -12,7 +12,8 @@
   "author": "Simon S. Soriano <simon0191@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.9.0"
+    "express": "^4.9.0",
+    "underscore": "^1.7.0"
   },
   "devDependencies": {
     "bower": "^1.3.10",
