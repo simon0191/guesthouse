@@ -1,0 +1,19 @@
+{
+  "name": "guest-house",
+  "version": "0.0.1",
+  "authors": [
+    "Simon S. Soriano <simon0191@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
