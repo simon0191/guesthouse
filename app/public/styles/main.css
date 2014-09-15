@@ -28,6 +28,7 @@
   background-image: url('/images/carousel.png');
   background-repeat: no-repeat;
   min-height: 280px;
+  background-size: cover;
 }
 @media(max-width:767px){
   .carousel {
